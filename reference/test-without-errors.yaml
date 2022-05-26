@@ -12,13 +12,13 @@ paths:
     parameters:
       - schema:
           type: integer
-        name: userName
+        name: user_name
         in: query
         required: true
         description: Id of an existing user.
       - schema:
           type: integer
-        name: userId
+        name: user_id
         in: path
         required: true
         description: Id of an existing user.

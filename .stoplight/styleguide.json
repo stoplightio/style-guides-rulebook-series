@@ -10,7 +10,7 @@
   "aliases": {},
   "rules": {},
   "extends": [
-    "cHJqOjEzNDcyMQ@7"
+    "cHJqOjEzNDcyMQ@9"
   ],
   "extendedStyleguides": [
     {
@@ -24,7 +24,7 @@
       "icon": "paint-brush",
       "color": "#B33771",
       "latestRelease": {
-        "release": 7
+        "release": 9
       }
     }
   ],
@@ -40,7 +40,7 @@
           "match": "(http:\\/\\/localhost)|(https).*"
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "oas3-always-use-https",
       "message": "Servers must use the HTTPS protocol except when using localhost",
       "formats": [
@@ -60,7 +60,7 @@
           ]
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "oas2-always-use-https",
       "message": "Servers must use the HTTPS protocol",
       "formats": [
@@ -78,7 +78,7 @@
           "match": "^[^A-Z]*$"
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "server-lowercase",
       "message": "Server URL must be lowercase",
       "formats": [
@@ -96,7 +96,7 @@
           "match": "^.*\\/api/?.*"
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "server-has-api",
       "message": "Server must have /api",
       "formats": [
@@ -114,7 +114,7 @@
           "match": "^.*\\/v[1-9]"
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "server-version",
       "message": "Server must end with a version",
       "formats": [
@@ -132,7 +132,7 @@
           "notMatch": "\\."
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "server-major-version-only",
       "message": "Server should only have major versions",
       "formats": [
@@ -151,7 +151,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "path-casing",
       "message": "Paths must be kebab-case"
     },
@@ -167,7 +167,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "resource-names-plural",
       "message": "Resource names should generally be plural"
     },
@@ -183,7 +183,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "paths-no-trailing-slash",
       "message": "Paths must not end with a trailing slash"
     },
@@ -199,7 +199,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "paths-no-file-extensions",
       "message": "Paths must not have file extensions"
     },
@@ -215,7 +215,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "paths-no-http-verbs",
       "message": "Paths must not have HTTP verbs in them"
     },
@@ -231,7 +231,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "paths-version-number",
       "message": "Paths must have a version in them"
     },
@@ -248,7 +248,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "paths-avoid-special-characters",
       "message": "Avoid using special characters in paths"
     },
@@ -264,42 +264,42 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "paths-no-query-params",
       "message": "Paths should not have query parameters in them. They should be defined separately in the OpenAPI."
     },
     {
       "given": [
-        "$..parameters[?(@.in == 'path')].name"
+        "#Request_Parameter_Path"
       ],
       "severity": "error",
       "then": {
         "function": "casing",
         "functionOptions": {
-          "type": "camel",
+          "type": "snake",
           "disallowDigits": true
         },
         "field": "name"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
-      "name": "path-parameters-camelcase",
-      "message": "Path parameters should be camelCase and not contain digits"
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "name": "path-parameters-snake-case",
+      "message": "Path parameters should be snake_case and not contain digits"
     },
     {
       "given": [
-        "$..parameters[?(@.in == 'query')].name"
+        "#Request_Parameter_Query"
       ],
       "severity": "error",
       "then": {
         "function": "casing",
         "functionOptions": {
-          "type": "camel",
+          "type": "snake",
           "disallowDigits": true
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
-      "name": "query-parameters-camelcase",
-      "message": "Query parameters should be camelCase and not contain digits"
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "name": "query-parameters-snake-case",
+      "message": "Query parameters should be snake_case and not contain digits"
     },
     {
       "given": [
@@ -309,7 +309,7 @@
       "then": {
         "function": "falsy"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "path-parameters-on-path-only",
       "message": "Path parameters should be defined on the path level instead of the operation level."
     },
@@ -322,13 +322,99 @@
         "function": "truthy",
         "field": "\\/status"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@7",
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
       "name": "status-path-defined",
       "message": "APIs MUST have a status path defined (`/status`)"
     }
   ],
+  "inheritedTargets": [
+    {
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "name": "Request_Parameter_Query",
+      "targets": [
+        {
+          "formats": [
+            "oas3"
+          ],
+          "given": "$.paths[*].parameters[?(@.in == 'query')].name"
+        },
+        {
+          "formats": [
+            "oas3"
+          ],
+          "given": "$.paths[*][*].parameters[?(@.in == 'query')].name"
+        },
+        {
+          "formats": [
+            "oas3"
+          ],
+          "given": "$.components.parameters[?(@.in == 'query')].name"
+        },
+        {
+          "formats": [
+            "oas2"
+          ],
+          "given": "$.paths[*].parameters[?(@.in == 'query')].name"
+        },
+        {
+          "formats": [
+            "oas2"
+          ],
+          "given": "$.paths[*][*].parameters[?(@.in == 'query')].name"
+        },
+        {
+          "formats": [
+            "oas2"
+          ],
+          "given": "$.components.parameters[?(@.in == 'query')].name"
+        }
+      ]
+    },
+    {
+      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "name": "Request_Parameter_Path",
+      "targets": [
+        {
+          "formats": [
+            "oas3"
+          ],
+          "given": "$.paths[*].parameters[?(@.in == 'path')].name"
+        },
+        {
+          "formats": [
+            "oas3"
+          ],
+          "given": "$.paths[*][*].parameters[?(@.in == 'path')].name"
+        },
+        {
+          "formats": [
+            "oas3"
+          ],
+          "given": "$.components.parameters[?(@.in == 'path')].name"
+        },
+        {
+          "formats": [
+            "oas2"
+          ],
+          "given": "$.paths[*].parameters[?(@.in == 'path')].name"
+        },
+        {
+          "formats": [
+            "oas2"
+          ],
+          "given": "$.paths[*][*].parameters[?(@.in == 'path')].name"
+        },
+        {
+          "formats": [
+            "oas2"
+          ],
+          "given": "$.components.parameters[?(@.in == 'path')].name"
+        }
+      ]
+    }
+  ],
   "library": {
-    "cHJqOjEzNDcyMQ@7": {
+    "cHJqOjEzNDcyMQ@9": {
       "description": "",
       "formats": [
         "oas2",
@@ -336,7 +422,90 @@
         "oas3.0",
         "oas3.1"
       ],
-      "aliases": {},
+      "aliases": {
+        "Request_Parameter_Query": {
+          "name": "Request_Parameter_Query",
+          "targets": [
+            {
+              "formats": [
+                "oas3"
+              ],
+              "given": "$.paths[*].parameters[?(@.in == 'query')].name"
+            },
+            {
+              "formats": [
+                "oas3"
+              ],
+              "given": "$.paths[*][*].parameters[?(@.in == 'query')].name"
+            },
+            {
+              "formats": [
+                "oas3"
+              ],
+              "given": "$.components.parameters[?(@.in == 'query')].name"
+            },
+            {
+              "formats": [
+                "oas2"
+              ],
+              "given": "$.paths[*].parameters[?(@.in == 'query')].name"
+            },
+            {
+              "formats": [
+                "oas2"
+              ],
+              "given": "$.paths[*][*].parameters[?(@.in == 'query')].name"
+            },
+            {
+              "formats": [
+                "oas2"
+              ],
+              "given": "$.components.parameters[?(@.in == 'query')].name"
+            }
+          ]
+        },
+        "Request_Parameter_Path": {
+          "name": "Request_Parameter_Path",
+          "targets": [
+            {
+              "formats": [
+                "oas3"
+              ],
+              "given": "$.paths[*].parameters[?(@.in == 'path')].name"
+            },
+            {
+              "formats": [
+                "oas3"
+              ],
+              "given": "$.paths[*][*].parameters[?(@.in == 'path')].name"
+            },
+            {
+              "formats": [
+                "oas3"
+              ],
+              "given": "$.components.parameters[?(@.in == 'path')].name"
+            },
+            {
+              "formats": [
+                "oas2"
+              ],
+              "given": "$.paths[*].parameters[?(@.in == 'path')].name"
+            },
+            {
+              "formats": [
+                "oas2"
+              ],
+              "given": "$.paths[*][*].parameters[?(@.in == 'path')].name"
+            },
+            {
+              "formats": [
+                "oas2"
+              ],
+              "given": "$.components.parameters[?(@.in == 'path')].name"
+            }
+          ]
+        }
+      },
       "rules": {
         "oas3-always-use-https": {
           "given": [
@@ -563,36 +732,36 @@
           "name": "paths-no-query-params",
           "message": "Paths should not have query parameters in them. They should be defined separately in the OpenAPI."
         },
-        "path-parameters-camelcase": {
+        "path-parameters-snake-case": {
           "given": [
-            "$..parameters[?(@.in == 'path')].name"
+            "#Request_Parameter_Path"
           ],
           "severity": "error",
           "then": {
             "function": "casing",
             "functionOptions": {
-              "type": "camel",
+              "type": "snake",
               "disallowDigits": true
             },
             "field": "name"
           },
-          "name": "path-parameters-camelcase",
-          "message": "Path parameters should be camelCase and not contain digits"
+          "name": "path-parameters-snake-case",
+          "message": "Path parameters should be snake_case and not contain digits"
         },
-        "query-parameters-camelcase": {
+        "query-parameters-snake-case": {
           "given": [
-            "$..parameters[?(@.in == 'query')].name"
+            "#Request_Parameter_Query"
           ],
           "severity": "error",
           "then": {
             "function": "casing",
             "functionOptions": {
-              "type": "camel",
+              "type": "snake",
               "disallowDigits": true
             }
           },
-          "name": "query-parameters-camelcase",
-          "message": "Query parameters should be camelCase and not contain digits"
+          "name": "query-parameters-snake-case",
+          "message": "Query parameters should be snake_case and not contain digits"
         },
         "path-parameters-on-path-only": {
           "given": [

@@ -6,7 +6,58 @@
     "oas3.0",
     "oas3.1"
   ],
-  "aliases": {},
+  "aliases": {
+    "Request_Parameter_Query": {
+      "description": "",
+      "targets": [
+        {
+          "formats": [
+            "oas3"
+          ],
+          "given": [
+            "$.paths[*].parameters[?(@.in == 'query')].name",
+            "$.paths[*][*].parameters[?(@.in == 'query')].name",
+            "$.components.parameters[?(@.in == 'query')].name"
+          ]
+        },
+        {
+          "formats": [
+            "oas2"
+          ],
+          "given": [
+            "$.paths[*].parameters[?(@.in == 'query')].name",
+            "$.paths[*][*].parameters[?(@.in == 'query')].name",
+            "$.components.parameters[?(@.in == 'query')].name"
+          ]
+        }
+      ]
+    },
+    "Request_Parameter_Path": {
+      "description": "",
+      "targets": [
+        {
+          "formats": [
+            "oas3"
+          ],
+          "given": [
+            "$.paths[*].parameters[?(@.in == 'path')].name",
+            "$.paths[*][*].parameters[?(@.in == 'path')].name",
+            "$.components.parameters[?(@.in == 'path')].name"
+          ]
+        },
+        {
+          "formats": [
+            "oas2"
+          ],
+          "given": [
+            "$.paths[*].parameters[?(@.in == 'path')].name",
+            "$.paths[*][*].parameters[?(@.in == 'path')].name",
+            "$.components.parameters[?(@.in == 'path')].name"
+          ]
+        }
+      ]
+    }
+  },
   "rules": {
     "oas3-always-use-https": {
       "given": [
@@ -219,34 +270,34 @@
       },
       "message": "Paths should not have query parameters in them. They should be defined separately in the OpenAPI."
     },
-    "path-parameters-camelcase": {
+    "path-parameters-snake-case": {
       "given": [
-        "$..parameters[?(@.in == 'path')].name"
+        "#Request_Parameter_Path"
       ],
       "severity": "error",
       "then": {
         "function": "casing",
         "functionOptions": {
-          "type": "camel",
+          "type": "snake",
           "disallowDigits": true
         },
         "field": "name"
       },
-      "message": "Path parameters should be camelCase and not contain digits"
+      "message": "Path parameters should be snake_case and not contain digits"
     },
-    "query-parameters-camelcase": {
+    "query-parameters-snake-case": {
       "given": [
-        "$..parameters[?(@.in == 'query')].name"
+        "#Request_Parameter_Query"
       ],
       "severity": "error",
       "then": {
         "function": "casing",
         "functionOptions": {
-          "type": "camel",
+          "type": "snake",
           "disallowDigits": true
         }
       },
-      "message": "Query parameters should be camelCase and not contain digits"
+      "message": "Query parameters should be snake_case and not contain digits"
     },
     "path-parameters-on-path-only": {
       "given": [
