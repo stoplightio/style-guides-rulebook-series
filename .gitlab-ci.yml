@@ -13,4 +13,4 @@ spectral-linting:   # This job also runs in the test stage.
     when: always
     reports:
       junit:
-        - test-reports/spectral-results.xml
+        - test-results/spectral-results.xml
