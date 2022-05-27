@@ -8,7 +8,7 @@ trigger:
 
 steps:
 - script: |
-    npx @stoplight/spectral-cli lint ./reference/**/*.{json,yml,yaml} -r .spectral.json -o -f junit
+    npx @stoplight/spectral-cli lint ./reference/**/*.{json,yml,yaml} -r .spectral.json -o test-results/spectral-results.xml -f junit
   displayName: 'spectral lint'
 
 - task: PublishTestResults@2
