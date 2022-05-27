@@ -8,7 +8,7 @@ spectral-linting:   # This job also runs in the test stage.
   script:
     - echo "Linting API Designs."
     - npm install -g @stoplight/spectral-cli
-    - spectral lint ./reference/**/*.{json,yml,yaml} -r .spectral.json -o test-reports/spectral-results.xml -f junit
+    - spectral lint ./reference/**/*.{json,yml,yaml} -r .spectral.json -o test-results/spectral-results.xml -f junit
   artifacts:
     when: always
     reports:
