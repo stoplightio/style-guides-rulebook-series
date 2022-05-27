@@ -6,9 +6,6 @@
 trigger:
 - master
 
-pool:
-  vmImage: ubuntu-latest
-
 steps:
 - script: |
     npm install -g @stoplight/spectral-cli
