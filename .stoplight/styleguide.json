@@ -10,7 +10,7 @@
   "aliases": {},
   "rules": {},
   "extends": [
-    "cHJqOjEzNDcyMQ@9"
+    "cHJqOjEzNDcyMQ@10"
   ],
   "extendedStyleguides": [
     {
@@ -24,7 +24,7 @@
       "icon": "paint-brush",
       "color": "#B33771",
       "latestRelease": {
-        "release": 9
+        "release": 10
       }
     }
   ],
@@ -40,7 +40,7 @@
           "match": "(http:\\/\\/localhost)|(https).*"
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "oas3-always-use-https",
       "message": "Servers must use the HTTPS protocol except when using localhost",
       "formats": [
@@ -60,7 +60,7 @@
           ]
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "oas2-always-use-https",
       "message": "Servers must use the HTTPS protocol",
       "formats": [
@@ -78,7 +78,7 @@
           "match": "^[^A-Z]*$"
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "server-lowercase",
       "message": "Server URL must be lowercase",
       "formats": [
@@ -96,7 +96,7 @@
           "match": "^.*\\/api/?.*"
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "server-has-api",
       "message": "Server must have /api",
       "formats": [
@@ -114,7 +114,7 @@
           "match": "^.*\\/v[1-9]"
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "server-version",
       "message": "Server must end with a version",
       "formats": [
@@ -132,7 +132,7 @@
           "notMatch": "\\."
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "server-major-version-only",
       "message": "Server should only have major versions",
       "formats": [
@@ -151,7 +151,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "path-casing",
       "message": "Paths must be kebab-case"
     },
@@ -167,7 +167,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "resource-names-plural",
       "message": "Resource names should generally be plural"
     },
@@ -183,7 +183,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "paths-no-trailing-slash",
       "message": "Paths must not end with a trailing slash"
     },
@@ -199,7 +199,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "paths-no-file-extensions",
       "message": "Paths must not have file extensions"
     },
@@ -215,7 +215,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "paths-no-http-verbs",
       "message": "Paths must not have HTTP verbs in them"
     },
@@ -231,7 +231,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "paths-version-number",
       "message": "Paths must have a version in them"
     },
@@ -248,7 +248,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "paths-avoid-special-characters",
       "message": "Avoid using special characters in paths"
     },
@@ -264,7 +264,7 @@
         },
         "field": "@key"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "paths-no-query-params",
       "message": "Paths should not have query parameters in them. They should be defined separately in the OpenAPI."
     },
@@ -281,7 +281,7 @@
         },
         "field": "name"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "path-parameters-snake-case",
       "message": "Path parameters should be snake_case and not contain digits"
     },
@@ -297,7 +297,7 @@
           "disallowDigits": true
         }
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "query-parameters-snake-case",
       "message": "Query parameters should be snake_case and not contain digits"
     },
@@ -309,7 +309,7 @@
       "then": {
         "function": "falsy"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "path-parameters-on-path-only",
       "message": "Path parameters should be defined on the path level instead of the operation level."
     },
@@ -322,14 +322,14 @@
         "function": "truthy",
         "field": "\\/status"
       },
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "status-path-defined",
       "message": "APIs MUST have a status path defined (`/status`)"
     }
   ],
   "inheritedTargets": [
     {
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "Request_Parameter_Query",
       "targets": [
         {
@@ -371,7 +371,7 @@
       ]
     },
     {
-      "extendedFrom": "cHJqOjEzNDcyMQ@9",
+      "extendedFrom": "cHJqOjEzNDcyMQ@10",
       "name": "Request_Parameter_Path",
       "targets": [
         {
@@ -414,7 +414,7 @@
     }
   ],
   "library": {
-    "cHJqOjEzNDcyMQ@9": {
+    "cHJqOjEzNDcyMQ@10": {
       "description": "",
       "formats": [
         "oas2",
@@ -598,7 +598,7 @@
           "given": [
             "$.servers[*].url"
           ],
-          "severity": "error",
+          "severity": "off",
           "then": {
             "function": "pattern",
             "functionOptions": {
@@ -690,7 +690,7 @@
           "given": [
             "$.paths"
           ],
-          "severity": "error",
+          "severity": "off",
           "then": {
             "function": "pattern",
             "functionOptions": {
