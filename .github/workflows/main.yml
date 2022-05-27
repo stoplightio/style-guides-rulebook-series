@@ -15,3 +15,4 @@ jobs:
       - uses: stoplightio/spectral-action@v0.8.2
         with:
           file_glob: 'reference/*.yaml'
+          spectral_ruleset: '.spectral.json'
