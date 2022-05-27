@@ -12,4 +12,4 @@ pipelines:
           name: 'Lint'
           script:
             - npm install -g @stoplight/spectral-cli
-            - spectral lint ./reference/**/*.{json,yml,yaml} -r .spectral.json -o ./test-reports/spectral-results.xml -f junit
+            - spectral lint ./reference/**/*.{json,yml,yaml} -r .spectral.json -o /spectral-results.xml -f junit
