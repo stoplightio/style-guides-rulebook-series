@@ -21,7 +21,7 @@ jobs:
             -o test-results/spectral-results.xml
             -f junit
       - store_test_results:
-          path: lint-results
+          path: test-results
 
 workflows:
   spectral-lint:
