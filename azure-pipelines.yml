@@ -8,6 +8,12 @@ trigger:
 
 steps:
 - script: |
-    npm install -g @stoplight/spectral-cli
-    spectral lint ./reference/**/*.{json,yml,yaml} -r .spectral.json -o test-results/spectral-results.xml -f junit
+    npx @stoplight/spectral-cli lint ./reference/**/*.{json,yml,yaml} -r .spectral.json -o -f junit
   displayName: 'spectral lint'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: 'test-results/spectral-results.xml'
+    failTaskOnFailedTests: true
+    testRunTitle: 'Spectral Linting Results' 
