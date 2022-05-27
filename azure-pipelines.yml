@@ -13,7 +13,6 @@ steps:
   continueOnError: true
 
 - task: PublishTestResults@2
-  continueOnError: true
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: 'test-results/spectral-results.xml'
