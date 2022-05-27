@@ -1,0 +1,9 @@
+stages:          # List of stages for jobs, and their order of execution
+  - lint
+
+spectral-linting:   # This job also runs in the test stage.
+  stage: lint    # It can run at the same time as unit-test-job (in parallel).
+  script:
+    - echo "Linting API Designs."
+    - npm install -g @stoplight/spectral-cli
+    - spectral lint ./reference/**/*.{json,yml,yaml} -r .spectral.json
